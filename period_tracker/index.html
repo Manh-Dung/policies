@@ -16,33 +16,54 @@
         }
         h1 { font-size: 24px; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 30px; }
         h2 { font-size: 18px; margin-top: 30px; margin-bottom: 15px; color: #000; }
+        h3 { font-size: 15px; margin-top: 20px; margin-bottom: 10px; color: #222; }
         p, li { font-size: 14px; color: #444; margin-bottom: 12px; }
         ul { padding-left: 20px; }
         .last-updated { font-style: italic; color: #777; margin-bottom: 40px; }
         .contact-info { background-color: #f9f9f9; padding: 20px; border-radius: 4px; border: 1px solid #eee; }
+        .highlight-box { background-color: #f0f7ff; border-left: 4px solid #0b57d0; padding: 15px 20px; margin: 20px 0; border-radius: 0 4px 4px 0; }
         table { width: 100%; border-collapse: collapse; margin: 20px 0; }
         th, td { text-align: left; padding: 10px; border-bottom: 1px solid #eee; font-size: 13px; }
         th { background-color: #f5f5f5; }
+        a { color: #0b57d0; text-decoration: none; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
     <h1>Privacy Policy</h1>
-    <p class="last-updated">Effective Date: April 15, 2026</p>
+    <p class="last-updated">Effective Date: September 16, 2026</p>
 
     <section>
         <h2>1. Overview</h2>
-        <p>This Privacy Policy describes how <strong>Period Tracker & Calendar</strong> ("we," "us," or "our") handes information. We are deeply committed to protecting your privacy, especially regarding sensitive health data, and ensuring a secure experience.</p>
-        <p><strong>Note: This application currently does not contain any advertisements.</strong></p>
+        <p>This Privacy Policy describes how <strong>Period Tracker & Calendar</strong> ("we," "us," or "our") handles your information. We are deeply committed to protecting your privacy, especially regarding sensitive personal health data, and ensuring a secure, transparent user experience.</p>
     </section>
 
     <section>
-        <h2>2. Data Collection and Usage</h2>
-        <p>We respect your privacy. Core health and cycle data you enter into the application (such as period dates, symptoms, moods, and notes) is <strong>stored locally on your device</strong> by default, ensuring you have full control over your personal information.</p>
+        <h2>2. Data Collection and Storage</h2>
+        <p>We believe your personal health data belongs exclusively to you. Core cycle data you enter into the application (such as period start/end dates, ovulation tracking, symptoms, mood logs, notes, weight, and reminders) is <strong>stored locally on your device by default</strong>.</p>
+        <p>We do not operate proprietary backend servers to collect, store, or sell your personal health records.</p>
     </section>
 
     <section>
-        <h2>3. Permissions</h2>
-        <p>To provide a seamless tracking and reminder experience, the app requires the following permissions:</p>
+        <h2>3. Google Drive Cloud Backup & Sync (User Data Only)</h2>
+        <p>If you choose to use the optional cloud backup and restore feature, our application integrates with <strong>Google Drive</strong>. We strictly adhere to the following principles:</p>
+        
+        <div class="highlight-box">
+            <ul>
+                <li><strong>Stored in Your Personal Google Drive:</strong> All backup files are saved directly to your personal Google Drive account (specifically within the app's dedicated, restricted application data storage space).</li>
+                <li><strong>User Data Exclusively:</strong> The application <strong>only</strong> creates and syncs structured backup files containing your personal cycle logs, notes, and app settings.</li>
+                <li><strong>No APKs or Executable Code:</strong> The application <strong>NEVER</strong> downloads, uploads, distributes, or executes any application packages (APK files), dynamic executable code (such as .dex, .jar, or .so files), or unauthorized third-party software from or to your Google Drive.</li>
+                <li><strong>No Access to Other Drive Files:</strong> We do not have access to, and cannot view, edit, or delete any of your other personal files, photos, or documents on Google Drive.</li>
+                <li><strong>Easy User Deletion & Control:</strong> You have full control over your backups at all times. You can easily delete your cloud backup data directly within the app's settings, or manage/remove the app's data and revoke access at any time via your <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account Permissions</a>.</li>
+            </ul>
+        </div>
+
+        <p>Our use and transfer of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+    </section>
+
+    <section>
+        <h2>4. Permissions Requested</h2>
+        <p>To provide tracking, timely reminders, and backup features, the app may request the following permissions:</p>
         
         <table>
             <thead>
@@ -53,54 +74,67 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Notifications</strong></td>
-                    <td>To send timely reminders about your upcoming period, ovulation, or pill schedules.</td>
+                    <td><strong>Notifications (POST_NOTIFICATIONS)</strong></td>
+                    <td>To send timely reminders about upcoming periods, fertile windows, ovulation, or medication schedules.</td>
                 </tr>
                 <tr>
-                    <td><strong>Alarms & Timers</strong></td>
-                    <td>To ensure notifications and reminders are triggered accurately on time.</td>
+                    <td><strong>Exact Alarms (SCHEDULE_EXACT_ALARM / USE_EXACT_ALARM)</strong></td>
+                    <td>To ensure cycle reminders and pill alarms trigger accurately at your chosen time.</td>
                 </tr>
                 <tr>
-                    <td><strong>Media / Storage</strong></td>
-                    <td>To allow you to attach images to your daily diary notes and manage personal backups.</td>
+                    <td><strong>Biometric Authentication (USE_BIOMETRIC / USE_FINGERPRINT)</strong></td>
+                    <td>To lock and protect your sensitive health data locally on your device with biometric security.</td>
                 </tr>
                 <tr>
-                    <td><strong>Internet Access</strong></td>
-                    <td>To facilitate anonymous analytics and error reporting, as well as handle in-app purchases.</td>
+                    <td><strong>Internet Access & Network State</strong></td>
+                    <td>To facilitate anonymous analytics, crash reporting, in-app purchases, and user-initiated Google Drive cloud backups.</td>
+                </tr>
+                <tr>
+                    <td><strong>Google Drive Access (OAuth)</strong></td>
+                    <td>Requested only when you manually sign in to backup or restore your personal cycle data.</td>
                 </tr>
             </tbody>
         </table>
     </section>
 
     <section>
-        <h2>4. Third-Party Services</h2>
-        <p>We use a limited number of third-party services for app stability and basic usage analytics. We do not sell your personal health data to any third party.</p>
+        <h2>5. Third-Party Services</h2>
+        <p>We use a limited number of trusted third-party service providers for app stability, anonymous analytics, advertisements, and payment processing. We do not sell your personal data.</p>
         <ul>
-            <li><strong>Firebase Analytics:</strong> To understand general app usage trends and improve user experience.</li>
-            <li><strong>Firebase Crashlytics:</strong> To identify and fix technical issues and app crashes.</li>
-            <li><strong>Google Play Services:</strong> Required for core Android OS functionalities.</li>
+            <li><strong>Google Drive API:</strong> For user-controlled backup and restore of app data. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
+            <li><strong>Firebase Analytics & Crashlytics:</strong> To understand usage trends and diagnose technical issues. <a href="https://firebase.google.com/policies/analytics" target="_blank" rel="noopener">Firebase Privacy Policy</a>.</li>
+            <li><strong>Google AdMob & Mediation:</strong> To display non-intrusive advertisements in the free version. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">AdMob Privacy Policy</a>.</li>
+            <li><strong>Google Play In-App Billing:</strong> To securely process premium subscriptions and purchases.</li>
         </ul>
     </section>
 
     <section>
-        <h2>5. Data Retention and Deletion</h2>
-        <p>Your core health data is stored locally on your device and is not sent to any external servers. You can permanently delete all your data at any time by uninstalling the application from your device or clearing the app's data in your device's settings.</p>
-        <p>For automatically collected information via third-party services (like Firebase Analytics), data is largely aggregated and pseudonymous. We retain such information for up to 14 months. You can stop all collection of information by uninstalling the Application.</p>
-        <p>If you have provided us with any direct personal information (like an email address for support) and wish to have it deleted, please contact us at <strong>manhdung5a@gmail.com</strong>. We will process your request and delete your data within a reasonable timeframe.</p>
+        <h2>6. Data Retention and Deletion</h2>
+        <p>You have complete control over your data:</p>
+        <ul>
+            <li><strong>Local Data:</strong> You can permanently delete all local data at any time by clearing the application data in your device settings or uninstalling the app.</li>
+            <li><strong>Cloud Backup Data:</strong> You can delete your Google Drive backup files directly from the app settings, or remove the app's saved data in your Google Drive settings.</li>
+            <li><strong>Support Requests:</strong> If you contact us via email for support, you may request the deletion of any personal communications by emailing us at <strong>manhdung5a@gmail.com</strong>. We will process and confirm your request promptly.</li>
+        </ul>
     </section>
 
     <section>
-        <h2>6. Children’s Privacy</h2>
-        <p>Our service does not address anyone under the age of 13. We do not knowingly collect personal information from children.</p>
+        <h2>7. Medical Disclaimer</h2>
+        <p><strong>Period Tracker & Calendar</strong> is designed solely for informational, personal tracking, and educational purposes. It is <strong>not</strong> a medical device and should not be used as a definitive method of contraception or family planning, nor does it substitute for professional medical advice, diagnosis, or treatment.</p>
+    </section>
+
+    <section>
+        <h2>8. Children’s Privacy</h2>
+        <p>Our service is not directed to individuals under the age of 13 (or under the applicable age in your jurisdiction). We do not knowingly collect personal information from children.</p>
     </section>
 
     <div style="height: 1px; background-color: #eee; margin: 40px 0;"></div>
 
     <section class="contact-info">
         <h2>Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy or your data, please contact us at:</p>
-        <p><strong>Name:</strong> Nguyễn Mạnh Dũng</p>
-        <p><strong>Email:</strong> manhdung5a@gmail.com</p>
+        <p>If you have any questions or concerns regarding this Privacy Policy or your data, please contact us at:</p>
+        <p><strong>Developer:</strong> Nguyễn Mạnh Dũng</p>
+        <p><strong>Email:</strong> <a href="mailto:manhdung5a@gmail.com">manhdung5a@gmail.com</a></p>
     </section>
 
     <footer style="margin-top: 50px; font-size: 12px; color: #999; text-align: center;">
